@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Agregar Palab Clave",
+        "link": "Sm4AgrePalClav.html"
+    },
+    {
+        "nombre": "Seleccion de Idioma ",
+        "link": "Sm4SelecIdioma.html"
+    },
+    {
+        "nombre": "Longitud de Nombre ",
+        "link": "Sm4LongNomb.html"
+    },
+    {
+        "nombre": "Combinar Ideas ",
+        "link": "Sm4CombIdea.html"
+    }
+]

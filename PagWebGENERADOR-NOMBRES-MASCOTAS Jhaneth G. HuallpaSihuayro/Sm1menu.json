@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Introduccion",
+        "link": "Sm1intro.html"
+    },
+    {
+        "nombre": "Categorías disponibles ",
+        "link": "Sm1categ.html"
+    },
+    {
+        "nombre": "Ejemplo de nombres populares",
+        "link": "Sm1popu.html"
+    },
+    {
+        "nombre": "Preguntas frecuentes",
+        "link": "Sm1preg.html"
+    }
+]

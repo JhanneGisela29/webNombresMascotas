@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <nombre>Inicio</nombre>
+        <link>02menuxml.html</link>
+		
+    </item>
+    <item>
+        <nombre>Generar Nombres</nombre>
+        <link>GenerarNombre.html</link>
+    </item>
+    <item>
+        <nombre>Tendencias</nombre>
+        <link>Tendencias.html</link>
+    </item>
+    <item>
+        <nombre>Personalizacion</nombre>
+        <link>Perzonalizacion.html</link>
+    </item>
+	 <item>
+        <nombre>Comunidad</nombre>
+        <link>Comunidad.html</link>
+    </item>
+	 <item>
+        <nombre>Recursos</nombre>
+        <link>Recursos.html</link>
+    </item>
+	 <item>
+        <nombre>FAQ</nombre>
+        <link>PreguntasFrecuente.html</link>
+    </item>
+	 <item>
+        <nombre>Contacto</nombre>
+        <link>Contacto.html</link>
+    </item>
+</menu>
+
+ 

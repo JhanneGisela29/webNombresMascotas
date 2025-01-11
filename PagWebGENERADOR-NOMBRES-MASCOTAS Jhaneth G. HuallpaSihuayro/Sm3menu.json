@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Nombres mas Usados",
+        "link": "Sm3NomMUsad.html"
+    },
+    {
+        "nombre": "Popularidad por Region ",
+        "link": "Sm3PopPReg.html"
+    },
+    {
+        "nombre": "Estilos Unicos ",
+        "link": "Sm3EstUnic.html"
+    },
+    {
+        "nombre": "Comparacion de Tendencias ",
+        "link": "Sm3CompTend.html"
+    }
+]

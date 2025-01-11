@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombres Populares de Mascotas por Región</title>
+    <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<nav class="navbar navbar-expand-lg bg-primary">
+			<div>
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="btn btn-light" href="Sm3NomMUsad.html">Nombres mas Usados</a></li>
+					<li class="nav-item"><a class="btn btn-light" href="Sm3PopPReg.html">Popularidad por Region</a></li>
+					<li class="nav-item"><a class="btn btn-light" href="Sm3EstUnic.html">Estilos Unicos</a></li>
+					<li class="nav-item"><a class="btn btn-light" href="Sm3CompTend.html">Comparacion de Tendencia</a></li>
+				</ul>
+			</div>
+		
+		</nav>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Nombres Populares de Mascotas por Región</h1>
+        
+        <div class="row">
+            <!-- Selector de Región -->
+            <div class="col-md-4 mb-3">
+                <select class="form-select" id="regionSelect" onchange="actualizarTabla()">
+                    <option value="norte">Región Norte</option>
+                    <option value="centro">Región Centro</option>
+                    <option value="sur">Región Sur</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Tabla de Popularidad -->
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Posición</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Porcentaje</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaDatos">
+                    <!-- Los datos se insertarán aquí mediante JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Gráfico de Barras -->
+        <div class="mt-4">
+            <canvas id="graficoPopularidad"></canvas>
+        </div>
+    </div>
+
+    <!-- Scripts necesarios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <script>
+        // Datos de ejemplo por región
+        const datosMascotas = {
+            norte: [
+                {nombre: "Luna", cantidad: 1200, porcentaje: 15},
+                {nombre: "Rocky", cantidad: 1000, porcentaje: 12.5},
+                {nombre: "Max", cantidad: 800, porcentaje: 10},
+                {nombre: "Bella", cantidad: 700, porcentaje: 8.75},
+                {nombre: "Thor", cantidad: 600, porcentaje: 7.5}
+            ],
+            centro: [
+                {nombre: "Milo", cantidad: 1500, porcentaje: 18},
+                {nombre: "Nina", cantidad: 1300, porcentaje: 15.6},
+                {nombre: "Zeus", cantidad: 900, porcentaje: 10.8},
+                {nombre: "Lola", cantidad: 800, porcentaje: 9.6},
+                {nombre: "Lucas", cantidad: 700, porcentaje: 8.4}
+            ],
+            sur: [
+                {nombre: "Coco", cantidad: 1100, porcentaje: 13.75},
+                {nombre: "Nala", cantidad: 1000, porcentaje: 12.5},
+                {nombre: "Simba", cantidad: 950, porcentaje: 11.875},
+                {nombre: "Kira", cantidad: 850, porcentaje: 10.625},
+                {nombre: "Toby", cantidad: 750, porcentaje: 9.375}
+            ]
+        };
+
+        let graficoActual;
+
+        function actualizarTabla() {
+            const region = document.getElementById('regionSelect').value;
+            const datos = datosMascotas[region];
+            const tbody = document.getElementById('tablaDatos');
+            
+            tbody.innerHTML = '';
+            datos.forEach((mascota, index) => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${mascota.nombre}</td>
+                        <td>${mascota.cantidad}</td>
+                        <td>${mascota.porcentaje}%</td>
+                    </tr>
+                `;
+            });
+
+            actualizarGrafico(datos);
+        }
+
+        function actualizarGrafico(datos) {
+            const ctx = document.getElementById('graficoPopularidad').getContext('2d');
+            
+            if (graficoActual) {
+                graficoActual.destroy();
+            }
+
+            graficoActual = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: datos.map(d => d.nombre),
+                    datasets: [{
+                        label: 'Cantidad de Mascotas',
+                        data: datos.map(d => d.cantidad),
+                        backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Inicializar la tabla y el gráfico al cargar la página
+        window.onload = function() {
+            actualizarTabla();
+        };
+    </script>
+</body>
+</html>

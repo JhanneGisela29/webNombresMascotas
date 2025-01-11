@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- link de los Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body style="background-color: #b0f2c2;">
+
+<div class="container py-5">
+    <!-- Sugerencias de Usuarios -->
+    <section class="mb-5">
+        <h2 class="mb-4">Sugerencias de Usuarios</h2>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <i class="bi bi-lightbulb fs-1 text-warning"></i>
+                            <h5 class="mt-2">Comparte tus ideas</h5>
+                            <p>Ayudanos a mejorar con tus sugerencias</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <i class="bi bi-chat-dots fs-1 text-primary"></i>
+                            <h5 class="mt-2">Comunicate</h5>
+                            <p>Estamos aqui para escucharte</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="text-center">
+                            <i class="bi bi-people fs-1 text-success"></i>
+                            <h5 class="mt-2">Comunidad</h5>
+                            <p>Unete a nuestra comunidad activa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Redes Sociales -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h2 class="h4 mb-0">Redes Sociales</h2>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-facebook fa-3x text-primary"></i>
+                                <p class="mt-2">Facebook</p>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-instagram fa-3x text-danger"></i>
+                                <p class="mt-2">Instagram</p>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-twitter fa-3x text-info"></i>
+                                <p class="mt-2">Twitter</p>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="#" class="text-decoration-none">
+                                <i class="fab fa-youtube fa-3x text-danger"></i>
+                                <p class="mt-2">YouTube</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Formulario de Consultas -->
+    <section class="mb-5" >
+        <h2 class="mb-4">Formulario de Consultas</h2>
+        <div class="card" >
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Correo electronico</label>
+                            <input type="email" class="form-control" id="email" >
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="asunto" class="form-label">Asunto</label>
+                        <input type="text" class="form-control" id="asunto" >
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="4" ></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Enviar consulta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback -->
+    <section>
+        <h2 class="mb-4">Feedback</h2>
+        <div class="card">
+            <div class="card-body">
+                <div class="mb-4">
+                    <h5>Que tan satisfecho estas con nuestro servicio?</h5>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-danger">1</button>
+                        <button type="button" class="btn btn-outline-warning">2</button>
+                        <button type="button" class="btn btn-outline-secondary">3</button>
+                        <button type="button" class="btn btn-outline-info">4</button>
+                        <button type="button" class="btn btn-outline-success">5</button>
+                    </div>
+                </div>
+                <div>
+                    <h5>Dejanos tu comentario</h5>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Comparte tu experiencia con nosotros"></textarea>
+                    <button type="submit" class="btn btn-success">Enviar feedback</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="bg-light py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">Encuentra el nombre perfecto para tu mascota </p>
+        </div>
+    </footer>
+
+<!-- Bootstrap JS y Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

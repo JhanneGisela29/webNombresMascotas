@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Seleccion por Tipo Mascota",
+        "link": "Sm2SelecTM.html"
+    },
+    {
+        "nombre": "Filtrar por Caracteristicas ",
+        "link": "Sm2FiltrarC.html"
+    },
+    {
+        "nombre": "Resultados Sugeridos",
+        "link": "Sm2ReslSug.html"
+    },
+    {
+        "nombre": "Guardad Favoritos",
+        "link": "Sm2GurdFav.html"
+    }
+]

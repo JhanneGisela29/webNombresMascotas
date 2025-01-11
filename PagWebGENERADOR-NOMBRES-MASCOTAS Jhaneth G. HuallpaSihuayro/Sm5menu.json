@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Compartir sugerencias",
+        "link": "Sm5CompartirSug.html"
+    },
+    {
+        "nombre": "Historias de usuarios ",
+        "link": "Sm5HistoriasUsu.html"
+    },
+    {
+        "nombre": "Galería de mascotas",
+        "link": "Sm5GaleriaMasc.html"
+    },
+    {
+        "nombre": "Redes sociales ",
+        "link": "Sm5RedesSoc.html"
+    }
+]
