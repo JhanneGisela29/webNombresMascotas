@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>Ejemplo</title>
+		<style>
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background-color: 69696a;
+			}
+			.container {
+				display: flex;
+				flex-direction: column;
+				width: 300px;
+				padding: 10px;
+				background-color: white;
+			}
+			.container input {
+				padding: 10px;
+				border: 1px solid #29292a;
+			}
+			.container input {
+				padding: 10px;
+				border: 1px solid #29292a;
+			}
+			.container h3 {
+				padding: 10px;
+				text-align: center;
+			}
+			.boton {
+				padding: 10px;
+				border: none;
+				background-color: #41ec51;
+			}
+			.alert {
+				padding: 15px 20px; 
+				border: 1px solid transparent;
+			}
+			.alert-success {
+				background-color: #cee8d1;
+				color: #67876b;
+				border-color: #546f57;
+			}
+			.alert-error {
+				background-color: #f3c7c7;
+				color: #b86262;
+				border-color: #974848;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h3>Formulario de Inscripcion de curso</h3>	
+			<form method="get">
+
+				<input type="text" class="form-control" name="nombre" placeholder="nombre">
+				<input type="text" class="form-control" name="apellido" placeholder="apellido">
+				<input type="date" class="form-control" name="FechaNacimiento" placeholder="FechaNacimiento">
+				<input type="textarea" class="form-control" name="descripcion" placeholder="decripcion">
+				<input class="boton" type="submit" class="btn btn-success" name="Aceptar">
+			</form>
+			<div class="alert alert-success">
+				Todo bien
+			</div>
+			<div class="alert alert-error">
+				Todo mal
+			</div>
+		</div>
+	</body>
+<html>
